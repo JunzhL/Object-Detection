@@ -43,7 +43,7 @@ def draw_box(predicted_classes,image, threshold, rect_th= 10,text_size= 3,text_t
     plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
     plt.show()
 
-    # plot the total number of each object, each object has a different color, group together and put legend at the bottom
+    # plot the total number of each object
     plt.figure(figsize=(10,5))
     colors = plt.cm.rainbow(np.linspace(0, 1, len(total_number_of_each_object)))
     plt.bar(total_number_of_each_object.keys(), total_number_of_each_object.values(), color=colors)
